@@ -1,0 +1,31 @@
+#galeria h2 {
+    font-size: 1.20em;
+    text-align: center;
+    color: white;
+}
+
+#galeria p {
+    font-size: 1.20em;
+    text-align: center;
+    color: white;
+}
+
+#galeria {
+    /* Modificarlo */
+    /* height: 50px; */
+    /* width: 50px; */
+    /*     padding: 150px; */
+    /*     margin-bottom: 2; */
+    background-color: rgb(30, 35, 35);
+}
+
+
+#galeria img {
+    padding: 25px;
+    width: 550px;
+    margin: 10px;
+    flex-wrap: wrap;
+    margin: auto;
+    background-repeat: no-repeat;
+
+}

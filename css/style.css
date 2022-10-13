@@ -1,0 +1,330 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+button {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: green;
+}
+
+button:hover {
+    background-color: rgb(43, 226, 92);
+}
+
+header {
+    display: flex;
+    position: fixed;
+    height: 85px;
+    width: 2135px;
+    background-color: rgb(245, 245, 245);
+    justify-content: space-between;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+header a:hover {
+    height: 70px;
+    background-color: rgb(43, 226, 92);
+    border-radius: 7px;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+}
+
+nav a {
+    font-weight: 550;
+    padding-right: 12px;
+    margin-left: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 125px;
+}
+
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/hola.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#hero h1 {
+    color: rgb(0, 255, 68);
+}
+
+#hero button {
+    font-size: 1.75em;
+}
+
+#Acerca-De.container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+.color-acento {
+    text-decoration: underline;
+    color: rgb(43, 226, 92);
+    font-size: 1.25em;
+}
+
+
+#Nuestro-Cronograma {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-bottom: 2px;
+}
+
+#Nuestro-Cronograma.container {
+    padding: 150px 0px;
+}
+
+#Nuestro-Cronograma h2 {
+    margin: 0;
+    padding: 15px;
+    font-size: 3.2em;
+}
+
+#Nuestro-Cronograma p {
+    display: none;
+
+}
+
+#Nuestro-Cronograma .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/Programa.jpg");
+
+
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/horario.jpg");
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("/img/torneos.jpg");
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 200px 12px;
+    margin-bottom: 2px;
+
+}
+
+#caracteristicas li {
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#Preguntas-frecuentes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+    height: 80vh;
+    color: white;
+    margin-bottom: 2px;
+
+}
+
+#Preguntas-frecuentes h2 {
+    font-size: 9vw;
+}
+
+#Preguntas-frecuentes button {
+    font-size: 5vw;
+
+}
+
+footer {
+    background-color: rgba(230, 230, 230, );
+}
+
+footer p {
+    margin: 0;
+    padding: 12px;
+    color: rgba(100, 100, 100, );
+}
+
+footer.container {
+    height: 150px;
+    justify-content: center;
+    align-items: flex-end
+}
+
+/* aca finaliza la parte Desktop */
+
+@media (max-width:700px) {
+    header {
+        width: auto;
+        flex-direction: center;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header a:hover {
+        background-color: rgb(43, 226, 92);
+        border-radius: 7px;
+        border: 5px solid rgba(0, 0, 0, 0.3);
+        transition: 0.1s;
+    }
+
+}
+
+#Nosotros.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+#Nosotros {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding-left: 20px;
+}
+
+#Nosotros.texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Nosotros h2 {
+    text-align: center;
+    margin: 2px;
+    padding: 15px;
+}
+
+#Nosotros .img-container {
+    margin: 2px;
+    background-image: url("/img/Martin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+    border: solid rgb(1, 102, 20) px;
+}
+
+#Nuestro-Cronograma .programas {
+    display: flex;
+    justify-content: center;
+}
+
+#Nuestro-Cronograma p {
+    display: block;
+}
+
+#Nuestro-Cronograma h3 {
+    margin-top: 0;
+}
+
+#Nuestro-Crograma .carta {
+    padding: 5px;
+}
+
+#caracteristicas {
+    background-image: url("/img/Caracteristicas.png");
+    background-repeat: no-repeat;
+    background-size: 900px 550px;
+    background-position: 950px 10px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+
+}
+
+#caracteristicas .container {
+    text-align: initial;
+}
+
+#caracteristicas ul {
+    margin-left: 100px;
+}
+
+#Preguntas-frecuentes h2 {
+    font-size: 2em;
+}
+
+#Preguntas-frecuentes button {
+    font-size: 2em;
+}
