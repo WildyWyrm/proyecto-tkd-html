@@ -1,0 +1,160 @@
+@media (max-width:700px) {
+    header {
+        width: auto;
+        flex-direction: center;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header a:hover {
+        background-color: rgb(43, 226, 92);
+        border-radius: 7px;
+        border: 5px solid rgba(0, 0, 0, 0.3);
+        transition: 0.1s;
+    }
+
+}
+
+#Nosotros.container {
+    display: flex;
+    justify-content: center;
+}
+
+#Nosotros {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding-left: 20px;
+}
+
+#Nosotros.texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Nosotros h2 {
+    text-align: center;
+    margin: 2px;
+    padding: 15px;
+}
+
+#Nosotros .img-container {
+    margin: 2px;
+    background-image: url("/img/Martin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+    border: solid rgb(1, 102, 20) px;
+    /* margin-left: 650px; */
+}
+
+#Nuestro-Cronograma .programas {
+    display: flex;
+    justify-content: center;
+}
+
+#Nuestro-Cronograma p {
+    display: block;
+}
+
+#Nuestro-Cronograma h3 {
+    margin-top: 0;
+}
+
+#Nuestro-Crograma .carta {
+    padding: 5px;
+}
+
+#caracteristicas {
+    background-image: url("/img/Caracteristicas.png");
+    background-repeat: no-repeat;
+    background-size: 900px 550px;
+    background-position: 950px 10px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+
+}
+
+#caracteristicas .container {
+    text-align: initial;
+}
+
+#caracteristicas ul {
+    margin-left: 100px;
+}
+
+#Preguntas-frecuentes h2 {
+    font-size: 2em;
+}
+
+#Preguntas-frecuentes button {
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------lo de la mantis-------------
+
+/* CARACTERISTICAS */
+#caracteristicas {
+    /* background-image: url("/img/Caracteristicas.png"); */
+    background-repeat: no-repeat;
+    background-size: 900px 550px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    float: left;
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 200px 12px;
+    margin-bottom: 2px;
+    background-color: rgb(35, 35, 35);
+    height: 50%;
+    width: 50%;
+}
+
+#caracteristicas li {
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+.mantis{
+    background-color: rgb(50, 50, 50);
+    width: 50%;
+    height: 80%;
+    /* margin-left: 50%; */
+    background-image: url("/img/Caracteristicas.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+}

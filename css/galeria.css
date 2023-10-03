@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+}
+
+html {
+    background:
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header {
+    height: 85px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-family: 'Kalam';
+
+}
+
+header nav a {
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+    text-decoration: none;
+
+}
+
+header a:hover {
+    height: 70px;
+    background-color: rgb(43, 226, 92);
+    border-radius: 7px;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 125px;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container a {
+    height: auto;
+    display: block;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 120px;
+}

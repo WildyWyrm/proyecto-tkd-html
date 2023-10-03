@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Tu encabezado aquí -->
+    </header>
+
+    <section class="contacto">
+        <h1>Contacto</h1>
+        <form id="contacto-form" action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <!-- Tu pie de página aquí -->
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contacto-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // Aquí puedes agregar código para validar y procesar los datos del formulario
+
+        // Por ejemplo, puedes enviar los datos a un servidor o mostrar un mensaje de confirmación
+        alert(`Gracias por tu mensaje, ${nombre}!`);
+
+        // Luego puedes restablecer el formulario
+        form.reset();
+    });
+});
+
+    </script>
+</body>
+</html>
