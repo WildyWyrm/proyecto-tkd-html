@@ -5,54 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-.contacto {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-    </style>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Tu encabezado aquí -->
-    </header>
-
+    <header></header>
     <section class="contacto">
         <h1>Contacto</h1>
         <form id="contacto-form" action="#" method="POST">
@@ -69,32 +31,7 @@ button:hover {
         </form>
     </section>
 
-    <footer>
-        <!-- Tu pie de página aquí -->
-    </footer>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contacto-form');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const nombre = document.getElementById('nombre').value;
-        const email = document.getElementById('email').value;
-        const mensaje = document.getElementById('mensaje').value;
-
-        // Aquí puedes agregar código para validar y procesar los datos del formulario
-
-        // Por ejemplo, puedes enviar los datos a un servidor o mostrar un mensaje de confirmación
-        alert(`Gracias por tu mensaje, ${nombre}!`);
-
-        // Luego puedes restablecer el formulario
-        form.reset();
-    });
-});
-
-    </script>
+    <footer></footer>
+    <script src="js/contacto.js"></script>
 </body>
 </html>
