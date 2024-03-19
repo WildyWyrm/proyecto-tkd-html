@@ -1,60 +1,156 @@
-        html {
-            --s: 50px;
-            --c: #191b22;
-            --_s: calc(2*var(--s)) calc(2*var(--s));
-            --_g: 35.36% 35.36% at;
-            --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
-            background:
-                radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-                radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-                radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-                radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-                repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-                radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-            background-attachment: fixed;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h1 {
-            color: rgb(0, 255, 68);
-            font-family: 'Tilt Prism', cursive;
-        }
-
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        th, td {
-    border: 2px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    background: linear-gradient(to bottom, #00aa09b2, #012d0f);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+body {
+    margin: 0;
 }
-    th{
-        font-family: 'Tilt Prism', cursive;
-        font-size: 1.5em;
-    }
-    td{
-        font-family: 'Lugrasimo', cursive;
-    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+:root {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+}
 
-        li {
-            margin-bottom: 5px;
-            color: white;
-            font-family: 'Roboto';
-        }
-    
+html {
+    background:
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+.boton-back {
+    background: transparent;
+    border: 2px solid #0096c7;
+    color: #0096c7;
+    padding: 0;
+    width: 170px;
+    height: 40px;
+    border-radius: 35px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.boton-back:hover {
+    background: #0096c7;
+    color: #fff;
+}
+
+.boton-back i {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.boton-back::before {
+    content: "Volver a inicio";
+    margin-right: 5px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0073b7, #0096c7);
+    /*     background: linear-gradient(to right, #66b865, #228320); */
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+}
+
+.boton-back:hover::before {
+    transform: translateX(0);
+}
+
+
+h1 {
+    color: #0073b7;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 40px auto;
+}
+
+th,
+td {
+    border: 1px solid #000000;
+    padding: 12px;
+    background-color: #228320;
+
+}
+
+th {
+    background-color: #66b865;
+    color: #000000;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: underline;
+
+
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: "Kode Mono", monospace;
+}
+
+td:hover,
+.kickboxing,
+.taekwondo {
+    background-color: #0096c7;
+}
+
+
+td {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.taekwondo,
+.kickboxing {
+    background-color: #66b865;
+}
+
+th.horario {
+    background-color: #228320;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: "Kode Mono", monospace;
+
+}
+
+li {
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: "Kode Mono", monospace;
+
+}
+
+.dias {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: "Kode Mono", monospace;
+
+}

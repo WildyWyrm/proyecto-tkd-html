@@ -1,108 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Planilla de Horarios</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="css/horarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
 </head>
+<style>
 
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planilla de Horarios</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+</style>
 
 <body>
+    <a href="inicio.html">
+        <button type="button" class="boton-back">
+            <i class="fas fa-arrow-left"></i> Volver a inicio
+        </button>
+    </a>
+    
     <h1>Planilla de Horarios</h1>
     <table>
         <thead>
             <tr>
                 <th>Días</th>
-                <th>Horarios</th>
+                <th class="horario">Taekwondo</th>
+                <th class="horario">Kickboxing</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Lunes</td>
-                <td>
+                <td class="dias">Lunes</td>
+                <td class="taekwondo">
                     <ul>
-                        <li>08:00 AM - 12:00 PM</li>
-                        <li>01:00 PM - 05:00 PM</li>
+                        <!--             <li>08:00 AM - 12:00 PM</li>
+            <li>01:00 PM - 05:00 PM</li> -->
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <!--             <li>18:00 PM - 19:00 PM</li> -->
                     </ul>
                 </td>
             </tr>
             <tr>
-                <td>Martes</td>
-                <td>
+                <td class="dias">Martes</td>
+                <td class="taekwondo">
                     <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
+                        <!-- <li>18:00 AM - 01:00 PM</li> -->
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <li>18:00 A 19:00 HS (Adultos)</li>
                     </ul>
                 </td>
             </tr>
-                <td>Miercoles</td>
-                <td>
+            <tr>
+                <td class="dias">Miércoles</td>
+                <td class="taekwondo">
                     <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
+                        <li>17:00 A 18:00 HS (Infantiles)</li>
+                        <li>18:00 A 19:00 HS (Adultos)</li>
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <!--             <li>18:00 PM - 19:00 PM</li> -->
                     </ul>
                 </td>
             </tr>
-                <td>Jueves</td>
-                <td>
+            <tr>
+                <td class="dias">Jueves</td>
+                <td class="taekwondo">
                     <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
+                        <!--             <li>09:00 AM - 01:00 PM</li>
+            <li>02:00 PM - 06:00 PM</li> -->
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <li>18:00 A 19:00 HS (Adultos)</li>
                     </ul>
                 </td>
             </tr>
-                <td>Viernes</td>
-                <td>
-                    <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
-                    </ul>
-                </td>
             </tr>
-                <td>Sabados</td>
-                <td>
-                    <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
-                    </ul>
-                </td>
-            </tr>
-                <td>Domingo</td>
-                <td>
-                    <ul>
-                        <li>09:00 AM - 01:00 PM</li>
-                        <li>02:00 PM - 06:00 PM</li>
-                    </ul>
-                </td>
-            </tr>
-            <!-- Repetirlo para el resto de los días -->
-        </tbody>
-    </table>
-    
-    <script src="script.js"></script>
-</body>
 
-</html>
+            <tr>
+                <td class="dias">Viernes</td>
+                <td class="taekwondo">
+                    <ul>
+                        <li>18:00 A 19:00 HS (Infantiles)</li>
+                        <li>19:00 A 20:00 HS (Adultos)</li>
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <!-- <li>20:00 A 21:00 HS (Adultos)</li> -->
+                    </ul>
+                </td>
+            </tr>
 
-</div>
-<script src="script.js"></script>
-</body>
+            <tr>
+                <td class="dias">Sábado</td>
+                <td class="taekwondo">
+                    <ul>
+                        <li>15:00 A 16:00 HS (Infantiles)</li>
+                        <li>16:00 A 17:00 HS (Adultos)</li>
+                    </ul>
+                </td>
+                <td class="kickboxing">
+                    <ul>
+                        <!--         <li>09:00 AM - 01:00 PM</li>
+        <li>02:00 PM - 06:00 PM</li> -->
+                    </ul>
+                </td>
+            </tr>
 
-</html>
+            <!--             <a href="inicio.html">
+                <button type="button">Volver a inicio</button>
+            </a> -->
+

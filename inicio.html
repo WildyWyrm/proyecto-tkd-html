@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pagina Web sobre Clases de Taekwon-do ITF en Moreno">
-    <title>Taekwon-do ITF</title>
+    <title>Taekwon-do ITF</title> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
 
     <!-- font-family: 'Kalam', cursive;
     font-family: 'Lugrasimo', cursive;
     font-family: 'Tilt Prism', cursive; -->
-    
+
 </head>
 
 <body>
@@ -27,7 +28,12 @@
             <img src="img/taekwondo_inicio2.png" alt="Taekwondologo">
             <h2>Instructores Asociados</h2>
         </a>
-        <nav>
+        <button id="menu-hamburguesa" class="menu-hamburguesa">
+            <span class="icono-hamburguesa"></span>
+        </button>
+
+        
+        <nav class="menu-oculto">
             <a href="inicio.html">Inicio </a>
             <a href="#Nosotros">Acerca de </a>
             <a href="#Nuestro-Cronograma">Programa </a>
@@ -39,6 +45,7 @@
         </nav>
     </header>
 
+
     <section id="hero">
         <h1>Escuela De Artes Marciales <br> Taekwon-do ITF Moreno</h1>
         <form action="informacion.html">
@@ -48,28 +55,27 @@
 
     <section id="Nosotros">
         <div class="container">
-            <div class="texto">
                 <h2>Acerca de <span class="color-acento">Nosotros!</span></h2>
                 <strong class="Subtitulo1">“EL Taekwondo ITF como factor de evolución y fomento de la educación
                     deportiva”</strong>
                 <strong class="Subtitulo1">Instructor: Sabon Martin Basabe III Dan de Taekwondo ITF</strong>
-                <strong class="Subtitulo">Objetivo:</strong> <span> Difundir el conocimiento y la práctica del Taekwondo
+                <strong class="Subtitulo">Objetivo:</strong> <span id="TextoSpan"> Difundir el conocimiento y la práctica del Taekwondo
                     en sus facetas artísticas,científicas y deportivas, mediante clases instructivas y torneos
                     competitivos </span>
-                <strong class="Subtitulo">Referencias y respaldo:</strong> <span>“Taekwondo Instructores Asociados”,
+                <strong class="Subtitulo">Referencias y respaldo:</strong> <span id="TextoSpan">“Taekwondo Instructores Asociados”,
                     Asociación Civil sede
                     central en Curuzú
                     Cuatiá provincia de Corrientes, presidente Hugo Cesar Gimarayz, Sagium Nim VIII DAN Taekwondo
                     ITF</span>
-                <strong class="Subtitulo">Trabajo y Difusión:</strong> <span>Promocionar la práctica del Taekwondo en la
+                <strong class="Subtitulo">Trabajo y Difusión:</strong> <span id="TextoSpan">Promocionar la práctica del Taekwondo en la
                     región y brindar a los alumnos un
                     adecuado marco institucional, de ese modo lograr el desarrollo integral de las personas a efectos de
-                    contribuir al <p></p> <span> desarrollo físico y social de los individuos, desde una prestigiosa
-                        institución
-                        deportiva, dirigida por recursos humanos genuinos de excelente calidad técnica y humana. </span>
-            </div>
+                    contribuir al desarrollo físico y social de los individuos, desde una prestigiosa institución
+                    deportiva, dirigida por recursos humanos genuinos de excelente calidad técnica y humana. </span>
 
-            <div class="img-container"></div>
+            <div class="img-container">
+                <img src="img/Martin.png" alt="Martin">
+            </div>
         </div>
     </section>
 
@@ -85,17 +91,13 @@
                 </div>
                 <div class="carta">
                     <h3>Horarios</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem libero velit,
-                        magnam laborum adipisci veniam autem quis ab saepe maxime neque odio. Eaque voluptatibus
-                        cumque laboriosam autem quia reprehenderit.</p>
-                        <button id="infoButton2">+ Info</button>
+                    <p>Consulta nuestra tabla de horarios para encontrar la clase que mejor se adapte a tu disponibilidad. Ofrecemos clases para niños, jóvenes y adultos, en diferentes días y horarios a lo largo de la semana.</p>
+                    <button id="infoButton2">+ Info</button>
                 </div>
                 <div class="carta">
                     <h3>Cursos y Torneos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem libero velit,
-                        magnam laborum adipisci veniam autem quis ab saepe maxime neque odio. Eaque voluptatibus
-                        cumque laboriosam autem quia reprehenderit.</p>
-                        <button id="infoButton3">+ Info</button>
+                    <p>Participa en torneos locales, nacionales e internacionales. Asiste a eventos especiales y talleres. Forma parte de una comunidad apasionada por las artes marciales.</p>
+                    <button id="infoButton3">+ Info</button>
                 </div>
             </div>
         </div>
@@ -232,16 +234,18 @@
                     coordinación y una mayor autoestima. Estas cualidades son vitales para una vida más feliz.
                 </p>
             </div>
-
-
         </div>
     </section>
 
     <section id="Ubicacion">
         <div class="container">
             <h2>Ubicacion</h2>
-            <iframe
+            <!--             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6620224283265!2d-58.7985383!3d-34.637980299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97d5bb702937%3A0xf8c365e030f38cbb!2sTaekwon-do%20ITF%20Moreno!5e0!3m2!1ses!2sar!4v1692459081237!5m2!1ses!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1238954637756!2d-58.772739723476775!3d-34.60102845735749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc96705fb6c5b5%3A0xe56b8bd55d0aaf50!2sManuel%20G%C3%A1lvez%208342%2C%20B1744%20Moreno%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1709428274263!5m2!1ses!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -258,6 +262,7 @@
     <script src="js/botones.js"></script>
     <script src="js/galeria.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/menu-hamburguesa.js"></script>
 </body>
 
 </html>
