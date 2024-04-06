@@ -1,19 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-const form = document.getElementById('contacto-form');
+const btn = document.getElementById('button');
 
-form.addEventListener('submit', function (e) {
-e.preventDefault();
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-const nombre = document.getElementById('nombre').value;
-const email = document.getElementById('email').value;
-const mensaje = document.getElementById('mensaje').value;
+   btn.value = 'Sending...';
 
-// Me falta validar y procesar los datos del formulario
+   const serviceID = 'default_service';
+   const templateID = 'template_8x4789o';
 
-// Mensaje de confirmación
-alert(`Gracias por tu mensaje, ${nombre}!`);
-
-// Restablecer el formulario
-form.reset();
-});
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
 });

@@ -4,6 +4,7 @@
   --_s: calc(2*var(--s)) calc(2*var(--s));
   --_g: 35.36% 35.36% at;
   --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+  --violet: #642fd5;
 }
 
 body {
@@ -13,18 +14,18 @@ body {
 
 
 .container {
-/*   max-width: 95%; */
   width: 100%;
   height: 100%;
-/*   padding-left: 30px; */
+
   background:
-    radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-  background-attachment: fixed;
+  radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+  radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+  radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+  radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+  repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+  radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+background-attachment: fixed;
+
 }
 
 html {
@@ -118,7 +119,7 @@ header a:hover {
 }
 
 .logo img {
-  height: 15vh;
+  height: 11vh;
 }
 
 /* Hero */
@@ -151,31 +152,26 @@ header a:hover {
 
 #Nosotros {
   color: white;
-  /*   width: 100%;
-  height: 100%; */
-  /*   margin-bottom: 2px; */
+  margin-bottom: 2px;
 }
 
 .color-acento {
   text-decoration: underline;
   color: #642fd5;
   font-size: 1.25em;
-  margin-left: 0 !important;
 }
 
 #Nosotros h2 {
   text-align: center;
-  justify-content: center;
-  align-items: center;
   margin: 2px;
   padding: 15px;
   font-size: 2em;
-  /* padding-bottom: 10px; */
 }
 
 #Nosotros .container {
-  /* padding-left: 30px; */
-/*   max-width: 95% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Subtitulo1 {
@@ -183,45 +179,54 @@ header a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 10px; */
   font-size: 1.5em;
 }
 
 .Subtitulo {
   padding: 10px;
-  margin-left: 25px;
   font-size: 1.5em;
 }
 
-#TextoSpan{
-    display: flex;
-    margin-left: 60px;
-    margin-bottom: 10px;
-    font-family: "Lugrasimo", cursive;
+#TextoSpan {
+  display: flex;
+  margin-left: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Lugrasimo", cursive;
+  word-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 #Nosotros strong {
   color: rgba(0, 255, 68, 0.7);
   font-family: "Kalam", cursive;
-} 
+}
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-#Nosotros .img-container {
+.texto {
+  flex: 1 0 40%;
+  padding: 0 20px;
+}
+
+.img-container {
+  display: ruby;
   margin: 2px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px;
 }
 
 #Nosotros .img-container img {
-  height: 30%;
-  width: 30%;
-  align-self: center;
+  width: 50%; 
+  height: auto; 
+  object-fit: cover;
 }
 
 /* Nuestro Programa */
@@ -316,7 +321,13 @@ header a:hover {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/torneos.jpg");
+    url("/img/Fotos/11.jpg");
+}
+.carta:nth-child(4) {
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+    url("/img/Fotos/3.jpg");
 }
 
 /* Caracteristicas */
@@ -365,8 +376,8 @@ header a:hover {
 /* Preguntas Frecuentes */
 #infoButton1,
 #infoButton2,
-#infoButton3 {
-  position: relative;
+#infoButton3,
+#infoButton4 {
   cursor: pointer;
   text-align: center;
   align-items: center;
@@ -387,6 +398,11 @@ header a:hover {
   flex-direction: column;
   background-color: rgb(30, 30, 30);
   color: white;
+  margin-bottom: 2px;
+}
+
+#Preguntas-frecuentes .container {
+  padding-bottom: 55px;
   margin-bottom: 2px;
 }
 
@@ -436,12 +452,13 @@ header a:hover {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: green;
+  color: white;
 }
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #9d80da; 
   display: none;
   overflow: hidden;
   text-align: left;
@@ -449,13 +466,13 @@ header a:hover {
 
 /* Footer */
 footer {
-  background-color: rgba(230, 230, 230);
+  background-color: rgb(0, 0, 0);
 }
 
 footer p {
   margin: 0;
   padding: 12px;
-  color: rgba(100, 100, 100);
+  color: white;
 }
 
 footer.container {
@@ -489,12 +506,11 @@ footer.container {
 
 #Ubicacion .container {
   padding-bottom: 80px;
+  margin-bottom: 2px;
 }
 
 #Ubicacion .container {
   text-align: center;
-  /*   width: auto;
-  height: auto; */
 }
 
 #Ubicacion .container h2 {
@@ -502,59 +518,144 @@ footer.container {
   text-decoration: underline;
 }
 
-#Ubicacion iframe {}
-
-
+/* Estilo responsive de Hero */
+/* Estilos para pantallas menores o iguales a 768px (móvil) */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5em;
+  }
+}
 
 /* Estilo para dispositivos móviles */
-@media only screen and (max-width: 918px) {
-  header a {
+/* Estilo responsive de #Nuestro-Cronograma - Cards */
+@media (max-width: 1608px) { 
+  #Nuestro-Cronograma {
+    height: auto; 
+  }
+
+  .programas {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .carta {
+    width: calc(100% - 40px); /* Ajusta el ancho de la tarjeta para pantallas pequeñas */
+    margin: 10px 20px; /* Ajusta el margen de la tarjeta para pantallas pequeñas */
+    padding: 30px; /* Aumenta el relleno de la tarjeta para pantallas pequeñas */
+    height: auto; /* Permite que la altura de la tarjeta se ajuste al contenido */
+  }
+
+  .carta p {
+    height: unset; /* Elimina la altura fija para el texto */
+  }
+
+  #infoButton1,
+  #infoButton2,
+  #infoButton3,
+  #infoButton4 {
+  width: 20%; 
+  height: 19%; 
+  }
+}
+
+/* Estilo responsive de Acerca de Nosotros */
+/* Estilos para pantallas menores o iguales a 768px (móvil) */
+@media (max-width: 768px) {
+  .texto {
+    flex: 1 0 100%;
+    padding-top: 35px;
+    padding: 0;
+    text-align: center;
+  }
+
+  #Nosotros .img-container img {
+    width: 100%;
+  }
+}
+
+/* Estilo responsive de Caracteristicas */
+/* Estilos para pantallas menores o iguales a 768px (móvil) */
+@media (max-width: 768px) {
+  #caracteristicas .container {
+    flex-direction: column; /* Apilamos el contenido */
+  }
+
+  #caracteristicas img {
     display: none;
   }
 
+  #caracteristicas h3 {
+    font-size: 2.5em; /* Reducimos el tamaño del encabezado */
+  }
+
+  #caracteristicas ol {
+    font-size: 1.5em;
+  }
+}
+
+/* Estilo responsive de Ubicacion */
+/* Estilos para pantallas menores o iguales a 768px (móvil) */
+@media (max-width: 768px) {
+  #Ubicacion body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  #Ubicacion h2 {
+    font-size: 1.8em; /* Ajusta el tamaño de fuente del titulo para móvil */
+  }
+
+  #Ubicacion {
+    display: flex;
+    justify-content: center;
+  }
+
+  #Ubicacion .container {
+    padding-bottom: 50px; /* Ajusta el padding para móvil */
+    margin-bottom: 2px;
+  }
+
+  #Ubicacion .container {
+    text-align: center;
+  }
+
+  #Ubicacion .container h2 {
+    color: white;
+    text-decoration: underline;
+  }
+
+  #Ubicacion iframe {
+    width: 85%; 
+    height: 200px; 
+  }  
+}
+
+/* Estilo responsive del Header (navbar) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu-oculto {
+      display: none;
+  }
+
+  .logo img {
+    height: 8vh;
+  }
+}
+
+/* Estilo responsive del Header (navbar) */
+@media (max-width: 1662px) {
   .menu-oculto {
     display: none;
   }
 
-  
-  #menu-hamburguesa {
-    margin-right: 15px;
-  }
-
-}
-
-/* Estilo para dispositivos de escritorio */
-@media only screen and (min-width: 918px) {
-  .menu-hamburguesa {
-    display: none;
-    /* Ocultar el botón hamburguesa en dispositivos de escritorio */
+  .logo img {
+    height: 9vh;
   }
 }
 
-/* Estilos para el menú hamburguesa */
 
-/* .icono-hamburguesa {
-  font-size: 24px;
-}
 
-.menu-oculto {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    z-index: 1000;
-}
 
-.menu-oculto a {
-    display: block;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.menu-oculto a:hover {
-    background-color: #444;
-} */

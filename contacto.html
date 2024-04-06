@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('Vrob4ErzmRex0k_BV')
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,27 +17,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lugrasimo&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header></header>
-    <section class="contacto">
-        <h1>Contacto</h1>
-        <form id="contacto-form" action="#" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    
+    <a href="inicio.html">
+        <button type="button" class="boton-back">
+            <i class="fas fa-arrow-left"></i> Volver a inicio
+        </button>
+    </a>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <!--  <h1>CONTACTO</h1> -->
+    <div class="container">
+        <img src="img/Mantis_Chibi_4.png" alt="Logo" id="logo">
+    </div>
+    
+    <form id="form">
+        <div class="field">
+            <label for="from_name">From_name</label>
+            <input type="text" name="from_name" autocomplete="off" id="from_name" required> 
+        </div>
+        <div class="field">
+            <label for="message">Message</label>
+            <input type="text" name="message" autocomplete="off" id="message" required> 
+        </div>
+        <div class="field">
+            <label for="email_id">Email_id</label>
+            <input type="email" name="email_id" autocomplete="off" id="email_id" required> 
+        </div>
+        <div class="field">
+            <label for="Phone">Phone</label>
+            <input type="tel" name="Phone" autocomplete="off" id="Phone" required> 
+        </div>
+        
+        <input type="submit" id="button" value="Send Email">
+    </form>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer></footer>
+    
     <script src="js/contacto.js"></script>
 </body>
+
 </html>

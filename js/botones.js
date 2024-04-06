@@ -1,6 +1,7 @@
 // Obtener el botón por su ID
 const infoButton1 = document.getElementById("infoButton1");
 const infoButton2 = document.getElementById("infoButton2");
+const infoButton4 = document.getElementById("infoButton4");
 // Agregar un evento de clic al botón
 infoButton1.addEventListener("click", function () {
     window.open("https://drive.google.com/drive/folders/13PJcl7tJMikhpEuwoJ-pztYor_jxoPXY", "_blank");
@@ -8,4 +9,7 @@ infoButton1.addEventListener("click", function () {
 
 infoButton2.addEventListener("click", function () {
     window.location.href = "horarios.html";
+});
+infoButton4.addEventListener("click", function () {
+    window.location.href = "galeria.html";
 });

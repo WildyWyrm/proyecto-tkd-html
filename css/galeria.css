@@ -33,9 +33,10 @@ header {
     width: 100%;
     background-color: rgb(245, 245, 245);
     display: flex;
-    position: fixed;
+/*     position: fixed; */
     justify-content: space-between;
     align-items: center;
+    /* position: static; */
 }
 
 header h2 {
@@ -79,20 +80,49 @@ header a:hover {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
 .container a {
     height: auto;
     display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .container img {
     max-width: 100%;
+    gap: 1px;
     height: auto;
-    margin-top: 120px;
+/*     margin-top: 120px; */
+}
+
+
+@media only screen and (max-width: 480px) {
+    /* Estilos para dispositivos móviles */
+    .logo img {
+        height: 12vh; /* Ajusta el tamaño del logo para móviles */
+    }
+
+    .menu-oculto {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1662px) {
+    .menu-oculto {
+        display: none;
+    }  
+
+    .container img {
+        max-width: 90%;
+    }
 }

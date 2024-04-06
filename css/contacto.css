@@ -1,39 +1,124 @@
-    .contacto {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    label {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    
-    input,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    
-    button:hover {
-        background-color: #0056b3;
-    }
+:root {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
+}
+
+html {
+    background:
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #0073b7;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.boton-back {
+    background: transparent;
+    border: 2px solid #0096c7;
+    color: #0096c7;
+    padding: 0;
+    width: 170px;
+    height: 40px;
+    border-radius: 35px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.boton-back:hover {
+    background: #0096c7;
+    color: #fff;
+}
+
+.boton-back i {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.boton-back::before {
+    content: "Volver a inicio";
+    margin-right: 5px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0073b7, #0096c7);
+    /*     background: linear-gradient(to right, #66b865, #228320); */
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+}
+
+.boton-back:hover::before {
+    transform: translateX(0);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    width: 18%;
+    height: 100%;
+}
+
+#form {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.field label {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.field input {
+    background: linear-gradient(#0073b7, #0096c7);
+    border-radius: 20px;
+    border: 1px solid #fff;
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 15px;
+    padding-left: 15px;
+    height: 20px;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #0096c7;
+    color: #fff;
+    border: none
+}
+

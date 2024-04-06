@@ -1,17 +1,22 @@
-/* let galeria = document.getElementById('galeria')
-let fotos = [
-    '1', '2', '3', '4',
-    '5', '6'
-]
-let cantidad = fotos.length;
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryContainer = document.getElementById("gallery");
+    const numImages = 108; // Número total de imágenes
 
-let contenido = '';
-let n = 0;
-while (n < cantidad) {
-    contenido = contenido + '<img src="img/Fotos/' + fotos[n] + '.jpg">';
-    n++;
-}
+    for (let i = 1; i <= numImages; i++) {
+        const link = document.createElement("a");
+        link.setAttribute("data-lightbox", "images");
+        link.setAttribute("rel", "lightbox");
+        link.setAttribute("data-title", "Taekwon-do ITF - Team Basabe");
+        link.setAttribute("href", `img/Fotos/${i}.jpg`);
 
-galeria.innerHTML = contenido;
+        const image = document.createElement("img");
+        image.setAttribute("src", `img/Fotos/${i}.jpg`);
+        image.setAttribute("alt", "");
+        /* image.setAttribute("style", "width: 500px;"); */
+        image.setAttribute("loading", "lazy");
 
- */
+        link.appendChild(image);
+        galleryContainer.appendChild(link);
+    }
+});
+
