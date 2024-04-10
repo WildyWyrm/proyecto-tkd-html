@@ -33,10 +33,10 @@ header {
     width: 100%;
     background-color: rgb(245, 245, 245);
     display: flex;
-/*     position: fixed; */
+    /* position: fixed; */
     justify-content: space-between;
     align-items: center;
-    /* position: static; */
+    
 }
 
 header h2 {
@@ -126,3 +126,32 @@ header a:hover {
         max-width: 90%;
     }
 }
+
+
+/* ARROW */
+#arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0096c7;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#arrow span {
+    font-size: 28px;
+}
+
+#arrow.hidden {
+    display: none;
+}
+
+#arrow.visible {
+    display: block;
+}
+

@@ -1,3 +1,4 @@
+/* Funcion de la gaeria */
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainer = document.getElementById("gallery");
     const numImages = 108; // Número total de imágenes
@@ -19,4 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
         galleryContainer.appendChild(link);
     }
 });
+
+/* Funcion flecha de retorno */
+window.addEventListener("scroll", function() {
+    var arrow = document.getElementById("arrow");
+    if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseas mostrar la flecha
+      arrow.classList.add("visible");
+      arrow.classList.remove("hidden");
+    } else {
+      arrow.classList.add("hidden");
+      arrow.classList.remove("visible");
+    }
+  });
+  
+  document.getElementById("arrow").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  
 
