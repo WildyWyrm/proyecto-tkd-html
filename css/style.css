@@ -518,8 +518,8 @@ footer.container {
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 2.5em;
-    padding: 323px 50px 42px 50px;
+    font-size: 2em;
+    padding: 220px 50px 42px 50px; /* 220 y 2 em */
   }
 }
 
