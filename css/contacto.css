@@ -123,3 +123,10 @@ input[type="submit"] {
     border: none
 }
 
+
+@media (max-width: 768px) {
+    #logo { width: 60%;
+    padding: 20px;
+    height: 100%;
+    }
+}
