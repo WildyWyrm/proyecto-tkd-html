@@ -1,7 +1,7 @@
-/* Funcion de la gaeria */
+/* Funcion de la galeria */
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainer = document.getElementById("gallery");
-    const numImages = 108; // Número total de imágenes
+    const numImages = 174; // Número total de imágenes
 
     for (let i = 1; i <= numImages; i++) {
         const link = document.createElement("a");

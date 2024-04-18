@@ -7,16 +7,16 @@
   --violet: #642fd5;
 }
 
+*{box-sizing: border-box; }
+
 body {
   font-family: sans-serif;
   margin: 0;
 }
 
-
 .container {
   width: 100%;
   height: 100%;
-
   background:
   radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
   radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
@@ -24,40 +24,20 @@ body {
   radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
   repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
   radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-background-attachment: fixed;
-
+  background-attachment: fixed;
 }
 
 html {
   scroll-behavior: smooth;
   height: 100%;
-
-
 }
 
-h1 {
-  font-size: 3.5em;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 2em;
-}
-
-p {
-  font-size: 1.25em;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  font-size: 1.2em;
-}
+p  {font-size: 1.25em;}
+h1 {font-size: 3.5em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 2em;}
+li {font-size: 1.2em;}
+ul {list-style: none;}
 
 a {
   text-decoration: none;
@@ -71,7 +51,7 @@ button {
   border: 2px solid rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   color: white;
-  background-color: green;
+  background-color: #1b7446;
 }
 
 button:hover {
@@ -79,52 +59,76 @@ button:hover {
 }
 
 /* Header */
-header {
-  height: 85px;
+nav {
+  background: linear-gradient(to bottom, #1b7446, #4caf50);
+  height: 90px;
   width: 100%;
-  background-color: rgb(245, 245, 245);
-  display: flex;
   position: fixed;
-  justify-content: space-between;
-  align-items: center;
 }
 
-
-
-header h2 {
-  font-family: "Kalam";
+.enlace {
+  position: absolute;
+  padding: 0px 30px;
 }
 
-header nav a {
-  font-weight: 550;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 25px;
-  font-family: "Kalam";
-  font-weight: bold;
-  font-size: 1.4em;
+.logo{
+  height: 100px;
 }
 
-header a:hover {
-  height: 70px;
-  background-color: rgb(43, 226, 92);
+.enlace h1 {
+  display: flex;
+  font-size: 20px;
+}
+
+.logo:hover {
+  height: 105px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-family: 'Kalam';
+  color: #fff;
+  font-size: 1.1em;
+  padding: 2px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+li a:hover {
+  background-color:#0073b7;
+  color: black;
   border-radius: 7px;
   border: 5px solid rgba(0, 0, 0, 0.3);
-  transition: 0.1s;
+  transition: 0.5s;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.checkbtn {
+  font-size: 25px; /* Tamaño del menu hamburguesa */
+  color: #fff; /* Color del menu hamburguesa */
+  float: right; 
+  line-height: 80px; 
+  padding-top: 8px;
+  margin-right: 25px;
+  cursor:pointer;
+  display: none;
 }
 
-.logo img {
-  height: 11vh;
+#check {
+  display: none;
 }
 
 /* Hero */
 #hero {
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -140,8 +144,14 @@ header a:hover {
 }
 
 #hero h1 {
-  color: rgb(0, 255, 68);
-  font-family: "Tilt Prism", cursive;
+  /* font-family: "Tilt Prism", cursive; */
+  /*   font-family: 'Kalam'; */
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 255, 68, 0.8);
+  margin: 0px;
+  padding: 300px 50px 42px 50px;
 }
 
 #hero button {
@@ -149,7 +159,6 @@ header a:hover {
 }
 
 /* Acerca de Nosotros! */
-
 #Nosotros {
   color: white;
   margin-bottom: 2px;
@@ -230,7 +239,6 @@ header a:hover {
 }
 
 /* Nuestro Programa */
-
 #Nuestro-Cronograma {
   color: white;
   margin-bottom: 2px;
@@ -269,10 +277,9 @@ header a:hover {
   background-size: cover;
   padding: 50px;
   border-radius: 15px;
-  width: 300px;
-  height: 400px;
-  margin: 0 50px;
-  /* espacio entre card y card */
+  width: 350px;
+  height: 500px;
+  margin: 0 50px; /* espacio entre card y card */
 }
 
 .carta p {
@@ -331,7 +338,6 @@ header a:hover {
 }
 
 /* Caracteristicas */
-
 #caracteristicas .container {
   display: flex;
   align-items: center;
@@ -339,10 +345,7 @@ header a:hover {
 }
 
 #caracteristicas .container img {
-  /*   max-height: 580px; */
-  object-fit: contain;
-  /*  */
-  /* Ajusta la imagen manteniendo su relación de aspecto */
+  object-fit: contain; /* Ajusta la imagen manteniendo su relación de aspecto */
 }
 
 #caracteristicas img {
@@ -351,10 +354,7 @@ header a:hover {
 }
 
 #caracteristicas ul {
-  flex: 1;
-  /* Ocupará el espacio restante */
-  /*   padding: 20px; */
-  /* Espacio para separar la imagen */
+  flex: 1; /* Ocupará el espacio restante */
 }
 
 #caracteristicas h3 {
@@ -438,7 +438,6 @@ header a:hover {
 }
 
 /* Accordion */
-
 .accordion {
   background-color: #eee;
   color: #444;
@@ -452,13 +451,13 @@ header a:hover {
 
 .active,
 .accordion:hover {
-  background-color: green;
+  background-color: #1b7446;
   color: white;
 }
 
 .panel {
   padding: 0 18px;
-  background-color: #9d80da; 
+  background-color: #0073b7; 
   display: none;
   overflow: hidden;
   text-align: left;
@@ -476,13 +475,12 @@ footer p {
 }
 
 footer.container {
-  /*   height: 150px; */
   justify-content: center;
   align-items: flex-end;
+  background-color: rgb(0, 0, 0);
 }
 
 /* ubicación */
-
 #Ubicacion body {
   display: flex;
   justify-content: center;
@@ -498,8 +496,6 @@ footer.container {
 }
 
 #Ubicacion {
-  /*     width: 100%;
-    height: auto; */
   display: flex;
   justify-content: center;
 }
@@ -523,6 +519,7 @@ footer.container {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 2.5em;
+    padding: 323px 50px 42px 50px;
   }
 }
 
@@ -656,6 +653,46 @@ footer.container {
   }
 }
 
+/* HAMBURUGUESA */
+@media(max-width: 952px) {
+  .enlace {
+    padding-left: 20px;
+  }
 
+  nav ul li a {
+    font-size: 16px;
+  }
+}
 
-
+@media (max-width: 1439px) {
+  .checkbtn {
+    display: block;
+  }
+  
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #204C37;
+    top: 73px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  nav li a:hover {
+    background: #0073b7;
+    color: black;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
