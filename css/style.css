@@ -656,6 +656,17 @@ footer.container {
     height: 9vh;
   }
 }
+/* Estilo responsive de Footer */
+/* Estilos para pantallas menores o iguales a 768px (móvil) */
+@media (max-width: 768px) {
+  footer p {
+    font-size: x-small;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer p {font-size: 1.25em;}
+}
 
 /* HAMBURUGUESA */
 @media(max-width: 952px) {
