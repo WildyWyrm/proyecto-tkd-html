@@ -217,7 +217,7 @@ footer #container {
 /* HAMBURUGUESA */
 @media(max-width: 952px) {
     .enlace {
-      padding-left: 20px;
+      padding-left: 10px;
     }
   
     nav ul li a {
@@ -240,6 +240,8 @@ footer #container {
       padding: 0;
       text-align: center;
       transition: all .5s;
+      overflow-x: auto;
+      overflow-y: auto;
     }
     nav ul li {
       display: block;

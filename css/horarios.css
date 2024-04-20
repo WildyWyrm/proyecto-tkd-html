@@ -73,6 +73,10 @@ html {
 h1 {
     color: #0073b7;
     text-align: center;
+    margin: 20px;
+    text-decoration: underline;
+    font-family: "Tilt Prism", cursive;
+
 }
 
 table {
@@ -92,8 +96,6 @@ td {
 th {
     background-color: #66b865;
     color: #000000;
-    font-weight: normal;
-    font-size: 16px;
     text-decoration: underline;
 
 
@@ -131,7 +133,7 @@ th.horario {
     font-weight: bold;
     text-align: center;
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: larger;
     font-family: "Kode Mono", monospace;
 
 }
@@ -140,7 +142,7 @@ li {
     font-weight: bold;
     text-align: center;
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: medium;
     font-family: "Kode Mono", monospace;
 }
 
@@ -149,7 +151,44 @@ li {
     font-weight: bold;
     text-align: center;
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: medium;
     font-family: "Kode Mono", monospace;
+}
 
+@media (max-width: 768px) {
+
+        table {
+            width: calc(100% - 20px); /* Resta 20px para dejar espacio a ambos lados */
+            margin: 0 auto; /* Centra la tabla horizontalmente */
+            overflow-x: auto; /* Agrega un scroll horizontal si la tabla es más ancha que el contenedor */
+        }
+    
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .boton-back {
+        width: 150px;
+        height: 35px;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    h1 {
+        margin: 20px;
+        
+        text-decoration: underline;
+        font-family: "Tilt Prism", cursive;
+    }
 }

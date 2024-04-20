@@ -435,11 +435,14 @@ li a:hover {
 
 #Preguntas-frecuentes button {
   font-size: 1.5em;
+    font-family: "Tilt Prism";
+    /* font-family: 'Kalam'; */
+  /* font-family: "Seymour One", sans-serif; */
 }
 
 /* Accordion */
 .accordion {
-  background-color: #eee;
+  background-color: #f2f2f2;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -519,7 +522,7 @@ footer.container {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 2em;
-    padding: 220px 50px 42px 50px; /* 220 y 2 em */
+    padding: 190px 50px 42px 50px; /* 220 y 2 em */
   }
 }
 
@@ -550,8 +553,9 @@ footer.container {
   #infoButton2,
   #infoButton3,
   #infoButton4 {
-  width: 20%; 
+  width: 23%; 
   height: 19%; 
+  font-size: large;
   }
 }
 
@@ -656,7 +660,7 @@ footer.container {
 /* HAMBURUGUESA */
 @media(max-width: 952px) {
   .enlace {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   nav ul li a {
@@ -678,6 +682,8 @@ footer.container {
     left: -100%;
     text-align: center;
     transition: all .5s;
+    overflow-x: auto;
+    overflow-y: auto;
   }
   nav ul li {
     display: block;
