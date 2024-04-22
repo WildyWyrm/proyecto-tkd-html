@@ -708,6 +708,7 @@ footer.container {
     transition: all .5s;
     overflow-x: auto;
     overflow-y: auto;
+    padding: 0px;
   }
   nav ul li {
     display: block;
