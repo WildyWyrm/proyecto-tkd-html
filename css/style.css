@@ -601,6 +601,7 @@ footer.container {
   #caracteristicas h3 {
     font-size: 2em; /* Reducimos el tamaño del encabezado */
     margin:20px;
+    text-align: center;
   }
 
   #caracteristicas ol {
