@@ -593,9 +593,9 @@ footer.container {
   }
 
   #caracteristicas img {
-            /* display: none; */
-            height: 15vh;
-            width: 30vh;
+    /* display: none; */
+    height: 15vh;
+    width: 30vh;
   }
 
   #caracteristicas h3 {
@@ -605,6 +605,7 @@ footer.container {
 
   #caracteristicas ol {
     font-size: 1.5em;
+    text-align: center;
   }
 
   #caracteristicas ul{
