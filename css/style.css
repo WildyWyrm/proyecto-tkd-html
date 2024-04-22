@@ -158,6 +158,10 @@ li a:hover {
   font-size: 1.75em;
 }
 
+#informacion-button {
+  cursor: pointer;
+}
+
 /* Acerca de Nosotros! */
 #Nosotros {
   color: white;
@@ -171,6 +175,7 @@ li a:hover {
 }
 
 #Nosotros h2 {
+  font-family: "Kalam", cursive;
   text-align: center;
   margin: 2px;
   padding: 15px;
@@ -257,7 +262,8 @@ li a:hover {
 #Nuestro-Cronograma h2 {
   font-size: 2em;
   text-decoration: underline;
-  font-family: "Lugrasimo", cursive;
+  /* font-family: "Lugrasimo", cursive; */
+  font-family: "Kalam", cursive;
 }
 
 #Nuestro-Cronograma p {
@@ -515,6 +521,7 @@ footer.container {
 #Ubicacion .container h2 {
   color: white;
   text-decoration: underline;
+  font-size: 2em;
 }
 
 /* Estilo responsive de Hero */
@@ -522,7 +529,7 @@ footer.container {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 2em;
-    padding: 190px 50px 42px 50px; /* 220 y 2 em */
+    padding: 170px 50px 42px 50px; /* 220 y 2 em */
   }
 }
 
@@ -572,6 +579,10 @@ footer.container {
   #Nosotros .img-container img {
     width: 100%;
   }
+
+  #Nosotros strong {
+    padding: 6px;
+}
 }
 
 /* Estilo responsive de Caracteristicas */
@@ -586,11 +597,16 @@ footer.container {
   }
 
   #caracteristicas h3 {
-    font-size: 2.5em; /* Reducimos el tamaño del encabezado */
+    font-size: 2em; /* Reducimos el tamaño del encabezado */
+    margin:20px;
   }
 
   #caracteristicas ol {
     font-size: 1.5em;
+  }
+
+  #caracteristicas ul{
+    padding: 0;
   }
 }
 
@@ -604,10 +620,6 @@ footer.container {
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-  }
-
-  #Ubicacion h2 {
-    font-size: 1.8em; /* Ajusta el tamaño de fuente del titulo para móvil */
   }
 
   #Ubicacion {
@@ -627,6 +639,7 @@ footer.container {
   #Ubicacion .container h2 {
     color: white;
     text-decoration: underline;
+    font-size: 2em;
   }
 
   #Ubicacion iframe {
