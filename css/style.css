@@ -593,7 +593,9 @@ footer.container {
   }
 
   #caracteristicas img {
-    display: none;
+            /* display: none; */
+            height: 15vh;
+            width: 30vh;
   }
 
   #caracteristicas h3 {
