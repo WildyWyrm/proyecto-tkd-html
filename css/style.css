@@ -716,7 +716,7 @@ footer.container {
   }
   nav ul li {
     display: block;
-    margin: 43px 0; /* cambie de 50 a 43  */
+    margin: 35px 0; /* cambie de 50 a 43  */
     line-height: 30px;
   }
   nav ul li a {
