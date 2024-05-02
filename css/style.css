@@ -320,27 +320,27 @@ li a:hover {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/Programa.jpg");
+    url("/img/programa-taekwondo-itf.jpg");
 }
 
 .carta:nth-child(2) {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/horario.jpg");
+    url("/img/horarios-clases-taekwondo.jpg");
 }
 
 .carta:nth-child(3) {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/Fotos/11.jpg");
+    url("/img/torneos-eventos-taekwondo.jpg");
 }
 .carta:nth-child(4) {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/Fotos/3.jpg");
+    url("/img/galeria-imagenes-taekwondo.jpg");
 }
 
 /* Caracteristicas */
