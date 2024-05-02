@@ -530,8 +530,9 @@ footer.container {
 }
 
 #Comentarios_Y_Sugerencias a {
+  font-weight: bold;
   display: inline-block;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
@@ -540,7 +541,7 @@ footer.container {
 }
 
 #Comentarios_Y_Sugerencias a:hover {
-  background-color: #45a049;
+  background-color: #642fd5;
 }
 
 
