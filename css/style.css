@@ -510,7 +510,7 @@ footer.container {
 }
 
 #Ubicacion .container {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   margin-bottom: 2px;
 }
 
@@ -523,6 +523,26 @@ footer.container {
   text-decoration: underline;
   font-size: 2em;
 }
+
+#Comentarios_Y_Sugerencias {
+  max-width: 600px;
+  margin: 50px auto 10px auto;
+}
+
+#Comentarios_Y_Sugerencias a {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#Comentarios_Y_Sugerencias a:hover {
+  background-color: #45a049;
+}
+
 
 /* Estilo responsive de Hero */
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
