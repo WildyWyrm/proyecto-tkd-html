@@ -739,6 +739,8 @@ footer.container {
   .checkbtn {
     display: block;
   }
+
+  
   
   nav ul{
     position: fixed;
@@ -770,3 +772,7 @@ footer.container {
     left: 0;
   }
 }
+
+
+
+
