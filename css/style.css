@@ -568,7 +568,14 @@ footer.container {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 2em;
-    padding: 170px 50px 42px 50px; /* 220 y 2 em */
+    padding: 170px 50px 42px 50px; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1662px) {
+  #hero h1 {
+    font-size: 2em;
+    padding: 120px 50px 42px 50px; 
   }
 }
 
