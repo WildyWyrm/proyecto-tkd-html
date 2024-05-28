@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const galleryContainer = document.getElementById("gallery");
   const numImages = 174; // Número total de imágenes
 
-  // Crear enlaces y elementos img, pero no establecer src inmediatamente
+  // Crea enlaces y elementos img, pero no establecer src inmediatamente
   for (let i = 1; i <= numImages; i++) {
       const link = document.createElement("a");
       link.setAttribute("data-lightbox", "images");
@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
               const img = entry.target;
-              img.src = img.dataset.src; // Establecer el src desde data-src
+              img.src = img.dataset.src; // Establece el src desde data-src
               observer.unobserve(img); // Dejar de observar la imagen una vez cargada
           }
       });
-  });
+    }, { threshold: 0.5 }); // Umbral de visibilidad ajustado al 50%
 
   // Observar todas las imágenes
   document.querySelectorAll('img[loading="lazy"]').forEach(img => {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Funcion flecha de retorno */
 window.addEventListener("scroll", function() {
   var arrow = document.getElementById("arrow");
-  if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseas mostrar la flecha
+  if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseo mostrar la flecha
       arrow.classList.add("visible");
       arrow.classList.remove("hidden");
   } else {
