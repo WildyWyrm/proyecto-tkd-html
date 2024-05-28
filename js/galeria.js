@@ -1,40 +1,53 @@
-/* Funcion de la galeria */
 document.addEventListener("DOMContentLoaded", function () {
-    const galleryContainer = document.getElementById("gallery");
-    const numImages = 174; // Número total de imágenes
+  const galleryContainer = document.getElementById("gallery");
+  const numImages = 174; // Número total de imágenes
 
-    for (let i = 1; i <= numImages; i++) {
-        const link = document.createElement("a");
-        link.setAttribute("data-lightbox", "images");
-        link.setAttribute("rel", "lightbox");
-        link.setAttribute("data-title", "Taekwon-do ITF - Team Basabe");
-        link.setAttribute("href", `img/Fotos/${i}.jpg`);
+  // Crear enlaces y elementos img, pero no establecer src inmediatamente
+  for (let i = 1; i <= numImages; i++) {
+      const link = document.createElement("a");
+      link.setAttribute("data-lightbox", "images");
+      link.setAttribute("rel", "lightbox");
+      link.setAttribute("data-title", "Taekwon-do ITF - Team Basabe");
+      link.setAttribute("href", `img/Fotos/${i}.jpg`);
 
-        const image = document.createElement("img");
-        image.setAttribute("src", `img/Fotos/${i}.jpg`);
-        image.setAttribute("alt", "");
-        /* image.setAttribute("style", "width: 500px;"); */
-        image.setAttribute("loading", "lazy");
+      const image = document.createElement("img");
+      image.setAttribute("data-src", `img/Fotos/${i}.jpg`);
+      image.setAttribute("alt", "");
+      image.setAttribute("loading", "lazy");
 
-        link.appendChild(image);
-        galleryContainer.appendChild(link);
-    }
+      link.appendChild(image);
+      galleryContainer.appendChild(link);
+  }
+
+  // Configurar el IntersectionObserver
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src; // Establecer el src desde data-src
+              observer.unobserve(img); // Dejar de observar la imagen una vez cargada
+          }
+      });
+  });
+
+  // Observar todas las imágenes
+  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      observer.observe(img);
+  });
 });
 
 /* Funcion flecha de retorno */
 window.addEventListener("scroll", function() {
-    var arrow = document.getElementById("arrow");
-    if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseas mostrar la flecha
+  var arrow = document.getElementById("arrow");
+  if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseas mostrar la flecha
       arrow.classList.add("visible");
       arrow.classList.remove("hidden");
-    } else {
+  } else {
       arrow.classList.add("hidden");
       arrow.classList.remove("visible");
-    }
-  });
-  
-  document.getElementById("arrow").addEventListener("click", function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-  
+  }
+});
 
+document.getElementById("arrow").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
