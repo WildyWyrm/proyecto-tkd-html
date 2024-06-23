@@ -241,25 +241,18 @@ nav ul li a .contenedor a:hover {
 }
 
 .texto {
-  flex: 1 0 40%;
+  flex: 0 0 57%;
   padding: 0 20px;
 }
 
-.img-container {
-  display: ruby;
-  margin: 2px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 30px;
-  padding: 40px;
-}
+.profile{
+	width: 50vh;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  }
 
-#Nosotros .img-container img {
-  width: 50%; 
-  height: auto; 
-  object-fit: cover;
-}
 
 /* Nuestro Programa */
 #Nuestro-Cronograma {
@@ -622,13 +615,27 @@ footer.container {
     text-align: center;
   }
 
-  #Nosotros .img-container img {
+  .profile {
+    display: flex;
+    justify-content: center;
     width: 100%;
-  }
+    margin-right: 0px;
+    /* padding: 20px; */
+    /* border-radius: 50px; */
+}
 
   #Nosotros strong {
     padding: 6px;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .profile {
+    width: 100%;
+    margin-right: 0px;
+    padding: 50px;
+    border-radius: 100px;
+  }
 }
 
 /* Estilo responsive de Caracteristicas */
