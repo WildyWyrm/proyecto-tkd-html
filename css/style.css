@@ -155,7 +155,7 @@ nav ul li a .contenedor a:hover {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)),
-    url("/img/escuela-artes-marciales-background.jpg");
+    url("/img/escuela-artes-marciales-background.jfif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -331,7 +331,7 @@ nav ul li a .contenedor a:hover {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
-    url("/img/programa-taekwondo-itf.jpg");
+    url("/img/programa-taekwondo-itf.jfif");
 }
 
 .carta:nth-child(2) {
