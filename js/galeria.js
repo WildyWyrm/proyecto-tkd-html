@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
       link.setAttribute("data-lightbox", "images");
       link.setAttribute("rel", "lightbox");
       link.setAttribute("data-title", "Taekwon-do ITF - Team Basabe");
-      link.setAttribute("href", `img/Fotos/${i}.jpg`);
+      link.setAttribute("href", `img/Fotos/${i}.webp`);
 
       const image = document.createElement("img");
-      image.setAttribute("data-src", `img/Fotos/${i}.jpg`);
+      image.setAttribute("data-src", `img/Fotos/${i}.webp`);
       image.setAttribute("alt", "");
       image.setAttribute("loading", "lazy");
 
