@@ -1,4 +1,4 @@
-/* 
+
 const imagenes = document.querySelectorAll('.lazyload'); // Seleccionamos todas las imágenes con la clase "lazyload"
 
 const observador = new IntersectionObserver(entradas => { // Creamos un observador de intersecciones
@@ -16,5 +16,5 @@ imagenes.forEach(imagen => { // Recorremos todas las imágenes
         imagen.dataset.src = imagen.getAttribute('href'); // Guardamos la URL real de la imagen en el atributo "data-src"
         observador.observe(imagen); // Comenzamos a observar la imagen
 });
- */
+
 

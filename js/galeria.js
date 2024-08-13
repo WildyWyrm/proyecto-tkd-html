@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Funcion flecha de retorno */
 window.addEventListener("scroll", function() {
-  var arrow = document.getElementById("arrow");
+  let arrow = document.getElementById("arrow");
   if (window.scrollY > 300) { // Cambia 300 por la posición en la que deseo mostrar la flecha
       arrow.classList.add("visible");
       arrow.classList.remove("hidden");
