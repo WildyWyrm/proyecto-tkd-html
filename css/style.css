@@ -98,7 +98,7 @@ nav ul li {
 nav ul li a {
   font-family: 'Kalam';
   color: #fff;
-  font-size: 1.1em;
+  font-size: large;
   padding: 2px 13px;
   border-radius: 3px;
   text-transform: uppercase;
@@ -246,7 +246,7 @@ nav ul li a .contenedor a:hover {
 }
 
 .profile{
-	width: 50vh;
+	width: 23vw;
   margin-right: 100px;
   margin-bottom: 20px;
   padding: 20px;
@@ -292,11 +292,11 @@ nav ul li a .contenedor a:hover {
 .carta {
   background-position: center center;
   background-size: cover;
-  padding: 50px;
+  padding: 35px;
   border-radius: 15px;
   width: 350px;
-  height: 500px;
-  margin: 0 50px; /* espacio entre card y card */
+  height: 450px;
+  margin: 3vh;
 }
 
 .carta p {
@@ -523,10 +523,6 @@ footer.container {
   text-align: center;
 }
 
-#Ubicacion .container {
-  
-}
-
 #Ubicacion .container h2 {
   color: white;
   text-decoration: underline;
@@ -572,7 +568,7 @@ footer.container {
 
 /* Estilo para dispositivos móviles */
 /* Estilo responsive de #Nuestro-Cronograma - Cards */
-@media (max-width: 1608px) { 
+@media (max-width: 1024px) { 
   #Nuestro-Cronograma {
     height: auto; 
   }
@@ -616,10 +612,10 @@ footer.container {
   .profile {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 28vh;
+    height: 100%;
     margin-right: 0px;
-    /* padding: 20px; */
-    /* border-radius: 50px; */
+    margin: auto;
 }
 
   #Nosotros strong {
@@ -629,10 +625,17 @@ footer.container {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .profile {
-    width: 100%;
+    width: 65vw;
+    height: 100%;
     margin-right: 0px;
     padding: 50px;
     border-radius: 100px;
+    margin: auto;
+}
+.texto {
+  flex: 1 0 57%;
+  padding: 0 20px;
+}
   }
 }
 
@@ -747,7 +750,7 @@ footer.container {
   }
 }
 
-@media (max-width: 1570px) {
+@media (max-width: 1024px) { /* maneja la muestra del navbar  */
   .checkbtn {
     display: block;
   }
