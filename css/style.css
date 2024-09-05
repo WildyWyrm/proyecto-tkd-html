@@ -372,8 +372,8 @@ nav ul li a .contenedor a:hover {
 }
 
 #caracteristicas h3 {
-  font-size: 2.5em;
-  margin-bottom: 50px;
+  text-align: center;
+  font-size: x-large;
   font-weight: lighter;
   color: white;
   font-family: "Kalam", cursive;
@@ -383,7 +383,7 @@ nav ul li a .contenedor a:hover {
 #caracteristicas ol {
   color: white;
   padding: 10px;
-  font-size: 2em;
+  font-size: large;
   font-family: "Lugrasimo", cursive;
 }
 
