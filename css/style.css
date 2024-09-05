@@ -364,7 +364,7 @@ nav ul li a .contenedor a:hover {
 
 #caracteristicas img {
   height: 10%;
-  width: 20vw;
+  width: 50%;
 }
 
 #caracteristicas ul {
@@ -372,8 +372,8 @@ nav ul li a .contenedor a:hover {
 }
 
 #caracteristicas h3 {
-  text-align: center;
-  font-size: x-large;
+  font-size: 2.5em;
+  margin-bottom: 50px;
   font-weight: lighter;
   color: white;
   font-family: "Kalam", cursive;
@@ -383,7 +383,7 @@ nav ul li a .contenedor a:hover {
 #caracteristicas ol {
   color: white;
   padding: 10px;
-  font-size: large;
+  font-size: 2em;
   font-family: "Lugrasimo", cursive;
 }
 
@@ -637,7 +637,7 @@ footer.container {
   padding: 0 20px;
 }
   }
-}
+
 
 /* Estilo responsive de Caracteristicas */
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
