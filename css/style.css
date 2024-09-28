@@ -554,8 +554,18 @@ footer.container {
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 2em;
+    font-size: x-large;
     padding: 170px 50px 42px 50px; 
+  }
+  #hero {
+    height: 60vh;
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)),
+      url("/img/fondito.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 }
 
