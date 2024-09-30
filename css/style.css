@@ -676,9 +676,9 @@ footer.container {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1665px) {
   .profile {
-    width: 65vw;
+    width: 35vw;
     height: 100%;
     margin-right: 0px;
     padding: 50px;
