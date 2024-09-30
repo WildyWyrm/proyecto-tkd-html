@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('menu-hamburguesa').addEventListener('click', function() {
-        document.querySelector('.menu-oculto').classList.toggle('mostrar');
+    const menuHamburguesa = document.getElementById('check'); 
+    const body = document.body;
+
+    menuHamburguesa.addEventListener('change', function() {
+        if (menuHamburguesa.checked) {
+            // Desactivar el scroll
+            body.classList.add('no-scroll');
+        } else {
+            // Activar el scroll
+            body.classList.remove('no-scroll');
+        }
     });
 });
-
-document.getElementById("myDIV").style.display = "none";
-

@@ -58,7 +58,12 @@ nav {
   background: linear-gradient(to bottom, #1b7446, #4caf50);
   height: 90px;
   width: 100%;
-  /* position: fixed; */
+  z-index: 1000; /* para que este por encima de todo */
+}
+
+/* Hace que al abrir el menu hamburguesa no puedan hacer scroll */
+.no-scroll {
+  overflow: hidden;
 }
   
   .enlace {
@@ -88,7 +93,7 @@ nav {
   nav ul li a {
     font-family: 'Kalam';
     color: #fff;
-    font-size: 1.1em;
+    font-size: large;
     padding: 2px 13px;
     border-radius: 3px;
     text-transform: uppercase;

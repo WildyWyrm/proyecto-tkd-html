@@ -64,6 +64,7 @@ nav {
   height: 90px;
   width: 100%;
   position: fixed;
+  z-index: 1000; /* para que este por encima de todo */
 }
 
 .enlace {
@@ -253,6 +254,48 @@ nav ul li a .contenedor a:hover {
   border-radius: 50px;
   }
 
+/* Estilos del carousel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  height: 157px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: 700%; 
+  animation: slide 5s infinite alternate ease-in-out; /* Anima en ambas direcciones */
+  cursor: pointer;
+}
+
+.carousel-item {
+  min-width: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 80%; /* Ajusta el tamaño de las imágenes */
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%); /* Posición inicial */
+  }
+  100% {
+    transform: translateX(-23%); /* Ajustamos para que no se vaya tanto a la izquierda */
+  }
+}
 
 /* Nuestro Programa */
 #Nuestro-Cronograma {
@@ -798,6 +841,34 @@ footer.container {
   }
 }
 
+/* Estilos del carousel mobiles */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    height: 65px; 
+  }
 
+  .carousel-item {
+    min-width: 13.5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 930px) {
+  .carousel-container {
+    height: 116px; 
+  }
+
+  .carousel-item {
+    min-width: 13.5%;
+  }
+}
+
+/* Hace que al abrir el menu hamburguesa no puedan hacer scroll */
+.no-scroll {
+  overflow: hidden;
+}
 
 
