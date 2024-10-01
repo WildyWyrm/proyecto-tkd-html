@@ -293,7 +293,7 @@ nav ul li a .contenedor a:hover {
     transform: translateX(0%); /* Posición inicial */
   }
   100% {
-    transform: translateX(-23%); /* Ajustamos para que no se vaya tanto a la izquierda */
+    transform: translateX(-20%); /* Ajustamos para que no se vaya tanto a la izquierda */
   }
 }
 
@@ -605,7 +605,7 @@ footer.container {
     background-image: linear-gradient(0deg,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)),
-      url("/img/fondito.jfif");
+      url("/img/academia-de-artes-marciales-background.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -852,7 +852,16 @@ footer.container {
   }
 
   .carousel-item {
-    min-width: 13.5%;
+    min-width: 16.5%;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); /* Posición inicial */
+    }
+    100% {
+      transform: translateX(-50%); /* Ajustamos para que no se vaya tanto a la izquierda */
+    }
   }
 }
 
@@ -865,6 +874,39 @@ footer.container {
     min-width: 13.5%;
   }
 }
+
+@media (max-width: 576px) {
+  /* Estilos para pantallas pequeñas como móviles */
+  .carousel-container {
+    height: 105px; 
+  }
+
+  .carousel-item {
+    min-width: 18.5%;
+  }
+
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); /* Posición inicial */
+    }
+    100% {
+      transform: translateX(-67%); /* Ajustamos para que no se vaya tanto a la izquierda */
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Estilos para pantallas medianas, como tablets pequeñas */
+  .carousel-container {
+    height: 120px; 
+  }
+
+  .carousel-item {
+    min-width: 16.5%;
+  }
+}
+
 
 /* Hace que al abrir el menu hamburguesa no puedan hacer scroll */
 .no-scroll {
