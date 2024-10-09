@@ -595,22 +595,46 @@ footer.container {
 
 /* Estilo responsive de Hero */
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Para pantallas móviles */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: x-large;
-    padding: 170px 50px 42px 50px; 
-  }
   #hero {
     height: 60vh;
-    background-image: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)),
-      url("/img/academia-de-artes-marciales-background.webp");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/img/academia-de-artes-marciales-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
+
+  #hero h1 {
+    font-size: x-large;
+    padding: 170px 50px 42px 50px;
+  }
+
+  #hero img {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
+  }
 }
+
 
 @media (min-width: 768px) and (max-width: 1662px) {
   #hero h1 {
