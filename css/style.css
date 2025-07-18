@@ -914,3 +914,11 @@ footer.container {
 }
 
 
+
+@media (max-width: 768px) {
+  .container {
+    background-attachment: scroll !important;
+  }
+}
+
+
