@@ -3,27 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadMoreButton = document.getElementById("loadMore");
   const arrow = document.getElementById("arrow");
 
-  const numImages = 174; // Total de imágenes
-  const imagesPerLoad = 3; // Cantidad de imágenes a cargar por clic
-  let currentIndex = 1; // Empezamos en la imagen 1
+  const numImages = 174;
+  const imagesPerLoad = 10;
+  let currentIndex = 1;
 
   const baseURL = "https://ik.imagekit.io/m2lli2rcl/Fotos/";
 
-  // Función para cargar imágenes a la galería
   function loadImages() {
     const fragment = document.createDocumentFragment();
 
     for (let i = currentIndex; i < currentIndex + imagesPerLoad && i <= numImages; i++) {
       const link = document.createElement("a");
       link.setAttribute("data-lightbox", "images");
-      link.setAttribute("rel", "lightbox");
-      link.setAttribute("data-title", "Taekwon-do ITF - Team Basabe");
+      link.setAttribute("data-title", `Taekwon-do ITF - Imagen ${i}`);
       link.setAttribute("href", `${baseURL}${i}.webp`);
 
       const image = document.createElement("img");
-      image.src = `${baseURL}${i}.webp`;
-      image.alt = `Imagen Taekwon-do ITF número ${i}`;
-      image.loading = "lazy";
+      image.setAttribute("data-src", `${baseURL}${i}.webp?tr=w-800`);
+      image.setAttribute("alt", `Imagen Taekwon-do ITF número ${i}`);
+      image.classList.add("lazy-image");
 
       link.appendChild(image);
       fragment.appendChild(link);
@@ -33,11 +31,34 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex += imagesPerLoad;
 
     if (currentIndex > numImages) {
-      loadMoreButton.style.display = 'none';
+      loadMoreButton.style.display = "none";
     }
+
+    lazyLoad(); 
   }
 
-  // Mostrar/ocultar flecha al hacer scroll
+  function lazyLoad() {
+    const images = document.querySelectorAll(".lazy-image");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+
+          img.addEventListener('load', () => {
+            img.classList.add('lazy-image-loaded');
+          });
+
+          img.classList.remove("lazy-image");
+          obs.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => observer.observe(img));
+  }
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
       arrow.classList.remove("hidden");
@@ -48,14 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Acción al hacer click en la flecha: subir arriba suavemente
   arrow.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Carga inicial de imágenes
   loadImages();
-
-  // Evento para cargar más imágenes con el botón
   loadMoreButton.addEventListener("click", loadImages);
 });
