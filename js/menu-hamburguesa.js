@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // NUEVO: cerrar menú cuando clickean un link del menú
-    const menuLinks = document.querySelectorAll('nav ul li a[href^="#"]'); // solo anclas internas
+    //cerrar menú cuando clickean un link del menú
+    const menuLinks = document.querySelectorAll('nav ul li a[href^="#"]'); 
 
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {

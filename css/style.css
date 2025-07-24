@@ -498,7 +498,7 @@ nav ul li a .contenedor a:hover {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  background-color: rgb(30, 30, 30);
+  background-color: #1b7446;
   color: white;
   margin-bottom: 2px;
 }
