@@ -4,11 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuHamburguesa.addEventListener('change', function() {
         if (menuHamburguesa.checked) {
-            // Desactivar el scroll
             body.classList.add('no-scroll');
         } else {
-            // Activar el scroll
             body.classList.remove('no-scroll');
         }
+    });
+
+    // NUEVO: cerrar menú cuando clickean un link del menú
+    const menuLinks = document.querySelectorAll('nav ul li a[href^="#"]'); // solo anclas internas
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Desmarcar checkbox para cerrar menú
+            menuHamburguesa.checked = false;
+            // Quitar clase que bloquea scroll
+            body.classList.remove('no-scroll');
+        });
     });
 });
