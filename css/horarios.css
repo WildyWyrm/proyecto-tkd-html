@@ -18,7 +18,8 @@ html {
         radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
         repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
         radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    background-attachment: fixed;
+    background-attachment: scroll;
+
 }
 
 .boton-back {
@@ -156,12 +157,15 @@ li {
 
 @media (max-width: 768px) {
 
-        table {
-            width: calc(100% - 20px); /* Resta 20px para dejar espacio a ambos lados */
-            margin: 0 auto; /* Centra la tabla horizontalmente */
-            overflow-x: auto; /* Agrega un scroll horizontal si la tabla es más ancha que el contenedor */
-        }
-    
+    table {
+        width: calc(100% - 20px);
+        /* Resta 20px para dejar espacio a ambos lados */
+        margin: 0 auto;
+        /* Centra la tabla horizontalmente */
+        overflow-x: auto;
+        /* Agrega un scroll horizontal si la tabla es más ancha que el contenedor */
+    }
+
 
     th,
     td {
@@ -186,7 +190,7 @@ li {
 
     h1 {
         margin: 20px;
-        
+
         text-decoration: underline;
         font-family: "Tilt Prism", cursive;
     }

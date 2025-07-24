@@ -6,18 +6,19 @@
             --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
             --violet: #642fd5;
         }
-        
+
         body {
             width: 100%;
             height: 100%;
             background:
-            radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-            radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-            radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-            radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-            repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-            radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-            background-attachment: fixed;
+                radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+                radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+                radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+                radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+                repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+                radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+            background-attachment: scroll;
+
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -45,12 +46,12 @@
             margin-top: 20px;
             margin-left: 50px;
         }
-        
+
         .boton-back:hover {
             background: #0096c7;
             color: #fff;
         }
-        
+
         .boton-back i {
             position: absolute;
             top: 70%;
@@ -58,7 +59,7 @@
             transform: translateY(-50%);
             font-size: 20px;
         }
-        
+
         .boton-back::before {
             content: "Volver a inicio";
             margin-right: 5px;
@@ -102,12 +103,15 @@
         }
 
         .img-container {
-            max-width: 400px; /* Ancho máximo para el contenedor de imágenes */
+            max-width: 400px;
+            /* Ancho máximo para el contenedor de imágenes */
         }
 
         img {
-            max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
-            height: auto; /* Para mantener la proporción */
+            max-width: 100%;
+            /* Hace que la imagen se ajuste al ancho del contenedor */
+            height: auto;
+            /* Para mantener la proporción */
         }
 
         h2 {
@@ -120,7 +124,7 @@
 
 
         @media (max-width: 768px) {
-            section{
+            section {
                 padding: 15px;
             }
 
@@ -137,4 +141,3 @@
                 margin-left: 120px;
             }
         }
-        
