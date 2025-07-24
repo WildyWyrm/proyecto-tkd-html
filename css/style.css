@@ -7,24 +7,28 @@
   --violet: #642fd5;
 }
 
-*{box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: sans-serif;
   margin: 0;
+  background:
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+    radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+    radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+    repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+  background-attachment: scroll;
+  will-change: background;
+  backface-visibility: hidden;
 }
 
 .container {
   width: 100%;
   height: 100%;
-  background:
-  radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-  radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-  radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-  radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-  repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-  radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-  background-attachment: scroll;
 }
 
 html {
@@ -32,12 +36,29 @@ html {
   height: 100%;
 }
 
-p  {font-size: 1.25em;}
-h1 {font-size: 3.5em;}
-h2 {font-size: 1.5em;}
-h3 {font-size: 2em;}
-li {font-size: 1.2em;}
-ul {list-style: none;}
+p {
+  font-size: 1.25em;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+li {
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+}
 
 a {
   text-decoration: none;
@@ -64,7 +85,8 @@ nav {
   height: 90px;
   width: 100%;
   position: fixed;
-  z-index: 1000; /* para que este por encima de todo */
+  z-index: 1000;
+  /* para que este por encima de todo */
 }
 
 .enlace {
@@ -72,7 +94,7 @@ nav {
   padding: 0px 30px;
 }
 
-.logo{
+.logo {
   height: 100px;
 }
 
@@ -106,7 +128,7 @@ nav ul li a {
 }
 
 li a:hover {
-  background-color:#0073b7;
+  background-color: #0073b7;
   color: black;
   border-radius: 7px;
   border: 5px solid rgba(0, 0, 0, 0.3);
@@ -114,13 +136,15 @@ li a:hover {
 }
 
 .checkbtn {
-  font-size: 25px; /* Tamaño del menu hamburguesa */
-  color: #fff; /* Color del menu hamburguesa */
-  float: right; 
-  line-height: 80px; 
+  font-size: 25px;
+  /* Tamaño del menu hamburguesa */
+  color: #fff;
+  /* Color del menu hamburguesa */
+  float: right;
+  line-height: 80px;
   padding-top: 8px;
   margin-right: 25px;
-  cursor:pointer;
+  cursor: pointer;
   display: none;
 }
 
@@ -129,19 +153,22 @@ li a:hover {
 }
 
 nav ul li a .contenedor {
-  display:inline-block ;
+  display: inline-block;
   display: flex;
   justify-content: center;
   /* line-height: 80px; */
   gap: 10px;
 }
+
 nav ul li a .contenedor a {
   font-size: 1.1em;
   transition: all ease 300ms;
 }
+
 nav ul li a .contenedor a:hover {
   transform: scale(1.2);
 }
+
 .fa-facebook {
   /* color: white; */
 }
@@ -246,31 +273,35 @@ nav ul li a .contenedor a:hover {
   padding: 0 20px;
 }
 
-.profile{
-	width: 23vw;
+.profile {
+  width: 23vw;
   margin-right: 100px;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 50px;
-  }
+}
 
 /* Estilos del carousel */
 .carousel-container {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 100%;
   overflow: hidden;
   margin: auto;
-  height: 157px;
+  height: 210px;
+  /*   height: 157px; */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #ffffff;
 }
 
 .carousel-track {
   display: flex;
-  width: 700%; 
-  animation: slide 5s infinite alternate ease-in-out; /* Anima en ambas direcciones */
+  width: 700%;
+  animation: slide 5s infinite alternate ease-in-out;
+  /* Anima en ambas direcciones */
   cursor: pointer;
   will-change: transform;
 
@@ -288,7 +319,8 @@ nav ul li a .contenedor a:hover {
 }
 
 .carousel-item img {
-  width: 80%; /* Ajusta el tamaño de las imágenes */
+  width: 80%;
+  /* Ajusta el tamaño de las imágenes */
   object-fit: contain;
   display: block;
   margin: auto;
@@ -296,10 +328,13 @@ nav ul li a .contenedor a:hover {
 
 @keyframes slide {
   0% {
-    transform: translateX(0%); /* Posición inicial */
+    transform: translateX(0%);
+    /* Posición inicial */
   }
+
   100% {
-    transform: translateX(-20%); /* Ajustamos para que no se vaya tanto a la izquierda */
+    transform: translateX(-20%);
+    /* Ajustamos para que no se vaya tanto a la izquierda */
   }
 }
 
@@ -344,8 +379,9 @@ nav ul li a .contenedor a:hover {
   padding: 35px;
   border-radius: 15px;
   width: 350px;
-  height: 450px;
   margin: 3vh;
+  min-height: 450px;
+  height: auto;
 }
 
 .carta p {
@@ -393,6 +429,7 @@ nav ul li a .contenedor a:hover {
       rgba(0, 0, 0, 0.5)),
     url("/img/torneos-eventos-taekwondo.webp");
 }
+
 .carta:nth-child(4) {
   background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5),
@@ -408,7 +445,8 @@ nav ul li a .contenedor a:hover {
 }
 
 #caracteristicas .container img {
-  object-fit: contain; /* Ajusta la imagen manteniendo su relación de aspecto */
+  object-fit: contain;
+  /* Ajusta la imagen manteniendo su relación de aspecto */
 }
 
 #caracteristicas img {
@@ -417,7 +455,8 @@ nav ul li a .contenedor a:hover {
 }
 
 #caracteristicas ul {
-  flex: 1; /* Ocupará el espacio restante */
+  flex: 1;
+  /* Ocupará el espacio restante */
 }
 
 #caracteristicas h3 {
@@ -523,7 +562,7 @@ nav ul li a .contenedor a:hover {
 
 .panel {
   padding: 0 18px;
-  background-color: #0073b7; 
+  background-color: #0073b7;
   display: none;
   overflow: hidden;
   text-align: left;
@@ -599,8 +638,9 @@ footer.container {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: x-large;
-    padding: 170px 50px 42px 50px; 
+    padding: 170px 50px 42px 50px;
   }
+
   #hero {
     height: 60vh;
     background-image: linear-gradient(0deg,
@@ -616,40 +656,45 @@ footer.container {
 @media (min-width: 768px) and (max-width: 1662px) {
   #hero h1 {
     font-size: 2em;
-    padding: 200px 50px 42px 50px; 
+    padding: 200px 50px 42px 50px;
   }
 }
 
 /* Estilo para dispositivos móviles */
 /* Estilo responsive de #Nuestro-Cronograma - Cards */
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   #Nuestro-Cronograma {
-    height: auto; 
+    height: auto;
   }
 
   .programas {
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .carta {
-    width: calc(100% - 40px); /* Ajusta el ancho de la tarjeta para pantallas pequeñas */
-    margin: 10px 20px; /* Ajusta el margen de la tarjeta para pantallas pequeñas */
-    padding: 30px; /* Aumenta el relleno de la tarjeta para pantallas pequeñas */
-    height: auto; /* Permite que la altura de la tarjeta se ajuste al contenido */
+    width: calc(100% - 40px);
+    /* Ajusta el ancho de la tarjeta para pantallas pequeñas */
+    margin: 10px 20px;
+    /* Ajusta el margen de la tarjeta para pantallas pequeñas */
+    padding: 30px;
+    /* Aumenta el relleno de la tarjeta para pantallas pequeñas */
+    height: auto;
+    /* Permite que la altura de la tarjeta se ajuste al contenido */
   }
 
   .carta p {
-    height: unset; /* Elimina la altura fija para el texto */
+    height: unset;
+    /* Elimina la altura fija para el texto */
   }
 
   #infoButton1,
   #infoButton2,
   #infoButton3,
   #infoButton4 {
-  width: 23%; 
-  height: 19%; 
-  font-size: large;
+    width: 23%;
+    height: 19%;
+    font-size: large;
   }
 }
 
@@ -670,7 +715,7 @@ footer.container {
     height: 100%;
     margin-right: 0px;
     margin: auto;
-}
+  }
 
   #Nosotros strong {
     padding: 6px;
@@ -685,19 +730,21 @@ footer.container {
     padding: 50px;
     border-radius: 100px;
     margin: auto;
-}
-.texto {
-  flex: 1 0 57%;
-  padding: 0 20px;
-}
   }
+
+  .texto {
+    flex: 1 0 57%;
+    padding: 0 20px;
+  }
+}
 
 
 /* Estilo responsive de Caracteristicas */
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
 @media (max-width: 768px) {
   #caracteristicas .container {
-    flex-direction: column; /* Apilamos el contenido */
+    flex-direction: column;
+    /* Apilamos el contenido */
   }
 
   #caracteristicas img {
@@ -707,8 +754,9 @@ footer.container {
   }
 
   #caracteristicas h3 {
-    font-size: 2em; /* Reducimos el tamaño del encabezado */
-    margin:20px;
+    font-size: 2em;
+    /* Reducimos el tamaño del encabezado */
+    margin: 20px;
     text-align: center;
   }
 
@@ -717,7 +765,7 @@ footer.container {
     text-align: center;
   }
 
-  #caracteristicas ul{
+  #caracteristicas ul {
     padding: 0;
   }
 }
@@ -740,7 +788,8 @@ footer.container {
   }
 
   #Ubicacion .container {
-    padding-bottom: 50px; /* Ajusta el padding para móvil */
+    padding-bottom: 50px;
+    /* Ajusta el padding para móvil */
     margin-bottom: 2px;
   }
 
@@ -755,15 +804,15 @@ footer.container {
   }
 
   #Ubicacion iframe {
-    width: 85%; 
-    height: 200px; 
-  }  
+    width: 85%;
+    height: 200px;
+  }
 }
 
 /* Estilo responsive del Header (navbar) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .menu-oculto {
-      display: none;
+    display: none;
   }
 
   .logo img {
@@ -781,6 +830,7 @@ footer.container {
     height: 9vh;
   }
 }
+
 /* Estilo responsive de Footer */
 /* Estilos para pantallas menores o iguales a 768px (móvil) */
 @media (max-width: 768px) {
@@ -790,7 +840,9 @@ footer.container {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  footer p {font-size: 1.25em;}
+  footer p {
+    font-size: 1.25em;
+  }
 }
 
 /* HAMBURUGUESA */
@@ -804,14 +856,16 @@ footer.container {
   }
 }
 
-@media (max-width: 1024px) { /* maneja la muestra del navbar  */
+@media (max-width: 1024px) {
+
+  /* maneja la muestra del navbar  */
   .checkbtn {
     display: block;
   }
 
-  
-  
-  nav ul{
+
+
+  nav ul {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -824,20 +878,25 @@ footer.container {
     overflow-y: auto;
     padding: 0px;
   }
+
   nav ul li {
     display: block;
-    margin: 35px 0; /* cambie de 50 a 43  */
+    margin: 35px 0;
+    /* cambie de 50 a 43  */
     line-height: 30px;
   }
+
   nav ul li a {
     font-size: 20px;
     font-weight: bolder;
   }
+
   nav li a:hover {
     background: #0073b7;
     color: black;
   }
-  #check:checked ~ ul {
+
+  #check:checked~ul {
     left: 0;
   }
 }
@@ -849,7 +908,7 @@ footer.container {
     max-width: 1200px;
     overflow: hidden;
     margin: auto;
-    height: 65px; 
+    height: 65px;
   }
 
   .carousel-item {
@@ -858,17 +917,20 @@ footer.container {
 
   @keyframes slide {
     0% {
-      transform: translateX(0%); /* Posición inicial */
+      transform: translateX(0%);
+      /* Posición inicial */
     }
+
     100% {
-      transform: translateX(-50%); /* Ajustamos para que no se vaya tanto a la izquierda */
+      transform: translateX(-50%);
+      /* Ajustamos para que no se vaya tanto a la izquierda */
     }
   }
 }
 
 @media (min-width: 768px) and (max-width: 930px) {
   .carousel-container {
-    height: 116px; 
+    height: 116px;
   }
 
   .carousel-item {
@@ -877,30 +939,35 @@ footer.container {
 }
 
 @media (max-width: 576px) {
+
   /* Estilos para pantallas pequeñas como móviles */
   .carousel-container {
-    height: 105px; 
+    height: 105px;
   }
 
   .carousel-item {
     min-width: 18.5%;
   }
 
-  
+
   @keyframes slide {
     0% {
-      transform: translateX(0%); /* Posición inicial */
+      transform: translateX(0%);
+      /* Posición inicial */
     }
+
     100% {
-      transform: translateX(-67%); /* Ajustamos para que no se vaya tanto a la izquierda */
+      transform: translateX(-67%);
+      /* Ajustamos para que no se vaya tanto a la izquierda */
     }
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+
   /* Estilos para pantallas medianas, como tablets pequeñas */
   .carousel-container {
-    height: 120px; 
+    height: 120px;
   }
 
   .carousel-item {
@@ -921,5 +988,3 @@ footer.container {
     background-attachment: scroll !important;
   }
 }
-
-
